@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Team | MyCompany</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              "fade-in": "fadeIn 0.6s ease-in-out",
+              "slide-up": "slideUp 0.8s ease-out",
+              "pulse-slow": "pulse 3s infinite",
+              "bounce-slow": "bounce 2s infinite",
+              float: "float 3s ease-in-out infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              slideUp: {
+                "0%": { opacity: "0", transform: "translateY(50px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gradient-bg {
+        background: linear-gradient(
+          135deg,
+          #1a1a1a 0%,
+          #2d2d2d 50%,
+          #1a1a1a 100%
+        );
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .team-card:hover {
+        transform: translateY(-8px) rotate(2deg) scale(1.03);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+      }
+      .icon-glow {
+        filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+      }
+      .profile-glow:hover {
+        box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+      }
+    </style>
+  </head>
+  <body class="gradient-bg min-h-screen text-gray-800">
+    <!-- Navbar akan di-load dari navbar.js -->
+
+    <!-- Hero -->
+    <section
+      class="relative h-[60vh] flex items-center justify-center overflow-hidden"
+    >
+      <img
+        src="images/index.jpg"
+        class="absolute inset-0 w-full h-full object-cover opacity-60 animate-fade-in"
+        alt="Team"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-gray-600/30 to-gray-800/30"
+      ></div>
+      <div class="relative max-w-6xl mx-auto px-4 text-center">
+        <div class="animate-slide-up">
+          <h2 class="text-7xl font-bold mb-6 text-white drop-shadow-2xl">
+            Tim Kami
+          </h2>
+          <p class="text-2xl text-white/90 mb-8">
+            Berpengalaman • Profesional • Berdedikasi
+          </p>
+          <div
+            class="inline-block bg-white/10 backdrop-blur-lg rounded-full px-8 py-4 border border-white/20"
+          >
+            <p class="text-white text-lg font-medium">
+              Kenali orang-orang hebat di balik kesuksesan kami
+            </p>
+          </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div
+          class="absolute top-20 left-10 w-20 h-20 bg-white/20 rounded-full animate-float"
+          style="animation-delay: 0s"
+        ></div>
+        <div
+          class="absolute top-40 right-20 w-16 h-16 bg-gray-300/20 rounded-full animate-float"
+          style="animation-delay: 1s"
+        ></div>
+        <div
+          class="absolute bottom-20 left-1/4 w-12 h-12 bg-gray-200/20 rounded-full animate-float"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16 animate-slide-up">
+          <h3 class="text-5xl font-bold text-white mb-6 drop-shadow-lg">
+            Kenali Orang di Balik Sukses Kami
+          </h3>
+          <p class="text-xl text-white/80 max-w-3xl mx-auto">
+            Tim profesional dengan keahlian dan dedikasi tinggi untuk memberikan
+            yang terbaik
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+          <!-- CEO Card -->
+          <div
+            class="team-card glass-effect rounded-3xl p-8 text-center transition-all duration-500 animate-fade-in"
+            style="animation-delay: 0.1s"
+          >
+            <div class="relative mb-6">
+              <div class="w-40 h-40 mx-auto relative">
+                <img
+                  src="images/test2.jpg"
+                  class="w-full h-full rounded-full object-cover border-4 border-white/20 profile-glow transition-all duration-300"
+                  alt="JEJE"
+                />
+                <div
+                  class="absolute -top-2 -right-2 bg-white w-12 h-12 rounded-full flex items-center justify-center animate-pulse-slow"
+                >
+                  <svg
+                    class="w-6 h-6 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 3l14 9-14 9V3z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-2">JEJE</h4>
+            <div
+              class="inline-block bg-gray-200 text-black px-4 py-2 rounded-full text-sm font-semibold mb-4"
+            >
+              Chief Executive Officer
+            </div>
+            <p class="text-white/80 leading-relaxed mb-6">
+              Pemimpin visioner yang mengarahkan strategi dan inovasi perusahaan
+              menuju masa depan yang gemilang.
+            </p>
+
+            <!-- Skills/Expertise -->
+            <div class="space-y-2">
+              <div
+                class="bg-white/10 rounded-full px-3 py-1 text-xs text-white/90 inline-block mr-2"
+              >
+                Leadership
+              </div>
+              <div
+                class="bg-white/10 rounded-full px-3 py-1 text-xs text-white/90 inline-block mr-2"
+              >
+                Strategy
+              </div>
+              <div
+                class="bg-white/10 rounded-full px-3 py-1 text-xs text-white/90 inline-block"
+              >
+                Innovation
+              </div>
+            </div>
+          </div>
+
+          <!-- CTO Card -->
+          <div
+            class="team-card glass-effect rounded-3xl p-8 text-center transition-all duration-500 animate-fade-in"
+            style="animation-delay: 0.3s"
+          >
+            <div class="relative mb-6">
+              <div class="w-40 h-40 mx-auto relative">
+                <img
+                  src="images/test3.png"
+                  class="w-full h-full rounded-full object-cover border-4 border-white/20 profile-glow transition-all duration-300"
+                  alt="Budi Rahman"
+                />
+                <div
+                  class="absolute -top-2 -right-2 bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center animate-pulse-slow"
+                >
+                  <svg
+                    class="w-6 h-6 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-2">Budi Rahman</h4>
+            <div
+              class="inline-block bg-gray-300 text-black px-4 py-2 rounded-full text-sm font-semibold mb-4"
+            >
+              Chief Technology Officer
+            </div>
+            <p class="text-white/80 leading-relaxed mb-6">
+              Ahli teknologi yang memastikan kualitas dan performa semua produk
+              digital dengan standar tertinggi.
+            </p>
+
+            <!-- Skills/Expertise -->
+            <div class="space-y-2">
+              <div
+                class="bg-white/10 rounded-full px-3 py-1 text-xs text-white/90 inline-block mr-2"
+              >
+                Full-Stack Development
+              </div>
+              <div
+                class="bg-white/10 rounded-full px-3 py-1 text-xs text-white/90 inline-block mr-2"
+              >
+                Cloud Architecture
+              </div>
+              <div
+                class="bg-white/10 rounded-full px-3 py-1 text-xs text-white/90 inline-block"
+              >
+                DevOps
+              </div>
+            </div>
+          </div>
+
+          <!-- Marketing Director Card -->
+          <div
+            class="team-card glass-effect rounded-3xl p-8 text-center transition-all duration-500 animate-fade-in"
+            style="animation-delay: 0.5s"
+          >
+            <div class="relative mb-6">
+              <div class="w-40 h-40 mx-auto relative">
+                <img
+                  src="images/test.jpg"
+                  class="w-full h-full rounded-full object-cover border-4 border-white/20 profile-glow transition-all duration-300"
+                  alt="Citra Ananda"
+                />
+                <div
+                  class="absolute -top-2 -right-2 bg-white w-12 h-12 rounded-full flex items-center justify-center animate-pulse-slow"
+                >
+                  <svg
+                    class="w-6 h-6 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-2">Citra Ananda</h4>
+            <div
+              class="inline-block bg-gray-100 text-black px-4 py-2 rounded-full text-sm font-semibold mb-4"
+            >
+              Marketing Director
+            </div>
+            <p class="text-white/80 leading-relaxed mb-6">
+              Menghubungkan produk kami dengan pasar yang tepat melalui strategi
+              kreatif dan inovatif.
+            </p>
+
+            <!-- Skills/Expertise -->
+            <div class="space-y-2">
+              <div
+                class="bg-white/10 rounded-full px-3 py-1 text-xs text-white/90 inline-block mr-2"
+              >
+                Digital Marketing
+              </div>
+              <div
+                class="bg-white/10 rounded-full px-3 py-1 text-xs text-white/90 inline-block mr-2"
+              >
+                Brand Strategy
+              </div>
+              <div
+                class="bg-white/10 rounded-full px-3 py-1 text-xs text-white/90 inline-block"
+              >
+                Analytics
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Stats Section -->
+        <div
+          class="mt-20 grid md:grid-cols-4 gap-6 animate-slide-up"
+          style="animation-delay: 0.7s"
+        >
+          <div
+            class="glass-effect rounded-2xl p-6 text-center transition-all duration-300 hover:scale-105"
+          >
+            <div class="text-3xl font-bold text-white mb-2">50+</div>
+            <div class="text-white/80">Projects Completed</div>
+          </div>
+          <div
+            class="glass-effect rounded-2xl p-6 text-center transition-all duration-300 hover:scale-105"
+          >
+            <div class="text-3xl font-bold text-white mb-2">98%</div>
+            <div class="text-white/80">Client Satisfaction</div>
+          </div>
+          <div
+            class="glass-effect rounded-2xl p-6 text-center transition-all duration-300 hover:scale-105"
+          >
+            <div class="text-3xl font-bold text-white mb-2">24/7</div>
+            <div class="text-white/80">Support Available</div>
+          </div>
+          <div
+            class="glass-effect rounded-2xl p-6 text-center transition-all duration-300 hover:scale-105"
+          >
+            <div class="text-3xl font-bold text-white mb-2">5+</div>
+            <div class="text-white/80">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="glass-effect text-white text-center py-8 border-t border-white/20"
+    >
+      <div class="max-w-6xl mx-auto px-4">
+        <p class="text-lg font-medium">
+          © 2025 MyCompany. All Rights Reserved.
+        </p>
+        <p class="text-white/70 mt-2">
+          Bersama membangun masa depan yang lebih baik
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Add any additional JavaScript functionality here
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        });
+      });
+    </script>
+
+    <!-- Load Navbar -->
+    <script src="js/navbar.js"></script>
+  </body>
+</html>

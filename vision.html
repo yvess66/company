@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vision & Mission | MyCompany</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              "fade-in": "fadeIn 0.6s ease-in-out",
+              "slide-up": "slideUp 0.8s ease-out",
+              "pulse-slow": "pulse 3s infinite",
+              "bounce-slow": "bounce 2s infinite",
+              float: "float 3s ease-in-out infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              slideUp: {
+                "0%": { opacity: "0", transform: "translateY(50px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gradient-bg {
+        background: linear-gradient(
+          135deg,
+          #1a1a1a 0%,
+          #2d2d2d 50%,
+          #1a1a1a 100%
+        );
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .vision-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body class="gradient-bg min-h-screen text-gray-800">
+    <!-- Navbar akan di-load dari navbar.js -->
+
+    <!-- Hero -->
+    <section
+      class="relative h-[60vh] flex items-center justify-center overflow-hidden"
+    >
+      <img
+        src="images/index.jpg"
+        class="absolute inset-0 w-full h-full object-cover opacity-60 animate-fade-in"
+        alt="Vision Mission"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-gray-600/30 to-gray-800/30"
+      ></div>
+      <div class="relative max-w-6xl mx-auto px-4 text-center">
+        <div class="animate-slide-up">
+          <h2 class="text-7xl font-bold mb-6 text-white drop-shadow-2xl">
+            Vision & Mission
+          </h2>
+          <p class="text-2xl text-white/90 mb-8">Panduan • Tujuan • Komitmen</p>
+          <div
+            class="inline-block bg-white/10 backdrop-blur-lg rounded-full px-8 py-4 border border-white/20"
+          >
+            <p class="text-white text-lg font-medium">
+              Arah dan tujuan yang menginspirasi setiap langkah kami
+            </p>
+          </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div
+          class="absolute top-20 left-10 w-20 h-20 bg-white/20 rounded-full animate-float"
+          style="animation-delay: 0s"
+        ></div>
+        <div
+          class="absolute top-40 right-20 w-16 h-16 bg-gray-300/20 rounded-full animate-float"
+          style="animation-delay: 1s"
+        ></div>
+        <div
+          class="absolute bottom-20 left-1/4 w-12 h-12 bg-gray-200/20 rounded-full animate-float"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Vision & Mission Content -->
+    <section class="py-20 relative">
+      <div class="max-w-6xl mx-auto px-4 space-y-20">
+        <!-- Vision Section -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div
+            class="vision-card glass-effect rounded-3xl p-12 transition-all duration-500 animate-fade-in"
+          >
+            <div
+              class="bg-white w-20 h-20 rounded-full flex items-center justify-center mb-8 animate-pulse-slow"
+            >
+              <svg
+                class="w-10 h-10 text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-4xl font-bold text-white mb-6">Our Vision</h3>
+            <p class="text-xl text-white/80 leading-relaxed mb-8">
+              Menjadi perusahaan teknologi terdepan yang mengubah cara dunia
+              berinteraksi dengan teknologi digital, menciptakan solusi inovatif
+              yang memberdayakan bisnis dan masyarakat untuk mencapai potensi
+              maksimal mereka.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white/10 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-white">2030</div>
+                <div class="text-white/70 text-sm">Target Vision</div>
+              </div>
+              <div class="bg-white/10 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-white">Global</div>
+                <div class="text-white/70 text-sm">Market Reach</div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="vision-card glass-effect rounded-3xl p-2 transition-all duration-500 animate-fade-in"
+            style="animation-delay: 0.3s"
+          >
+            <img
+              src="images/test.jpg"
+              alt="Vision"
+              class="rounded-2xl w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Mission Section -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div
+            class="vision-card glass-effect rounded-3xl p-2 transition-all duration-500 animate-fade-in order-2 lg:order-1"
+          >
+            <img
+              src="images/about.jpg"
+              alt="Mission"
+              class="rounded-2xl w-full h-full object-cover"
+            />
+          </div>
+
+          <div
+            class="vision-card glass-effect rounded-3xl p-12 transition-all duration-500 animate-fade-in order-1 lg:order-2"
+            style="animation-delay: 0.3s"
+          >
+            <div
+              class="bg-gray-200 w-20 h-20 rounded-full flex items-center justify-center mb-8 animate-pulse-slow"
+            >
+              <svg
+                class="w-10 h-10 text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-4xl font-bold text-white mb-6">Our Mission</h3>
+            <ul class="space-y-4 text-lg text-white/80">
+              <li class="flex items-start space-x-3">
+                <div
+                  class="bg-gray-200 w-6 h-6 rounded-full flex items-center justify-center mt-1 flex-shrink-0"
+                >
+                  <svg
+                    class="w-3 h-3 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                </div>
+                <span
+                  >Mengembangkan solusi teknologi yang mudah diakses dan
+                  bermanfaat bagi semua kalangan</span
+                >
+              </li>
+              <li class="flex items-start space-x-3">
+                <div
+                  class="bg-gray-300 w-6 h-6 rounded-full flex items-center justify-center mt-1 flex-shrink-0"
+                >
+                  <svg
+                    class="w-3 h-3 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                </div>
+                <span
+                  >Memberikan layanan berkualitas tinggi dengan standar
+                  internasional</span
+                >
+              </li>
+              <li class="flex items-start space-x-3">
+                <div
+                  class="bg-white w-6 h-6 rounded-full flex items-center justify-center mt-1 flex-shrink-0"
+                >
+                  <svg
+                    class="w-3 h-3 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                </div>
+                <span
+                  >Membangun ekosistem teknologi yang berkelanjutan dan ramah
+                  lingkungan</span
+                >
+              </li>
+              <li class="flex items-start space-x-3">
+                <div
+                  class="bg-gray-100 w-6 h-6 rounded-full flex items-center justify-center mt-1 flex-shrink-0"
+                >
+                  <svg
+                    class="w-3 h-3 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                </div>
+                <span
+                  >Memberdayakan tim dan komunitas melalui inovasi teknologi
+                  terdepan</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Core Principles -->
+        <div class="text-center mb-16 animate-slide-up">
+          <h3 class="text-5xl font-bold text-white mb-6 drop-shadow-lg">
+            Core Principles
+          </h3>
+          <p class="text-xl text-white/80 max-w-3xl mx-auto">
+            Prinsip-prinsip fundamental yang membimbing setiap keputusan dan
+            tindakan kami
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Innovation -->
+          <div
+            class="vision-card glass-effect rounded-3xl p-8 text-center transition-all duration-500 animate-fade-in"
+            style="animation-delay: 0.1s"
+          >
+            <div
+              class="bg-gray-200 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 animate-pulse-slow"
+            >
+              <svg
+                class="w-8 h-8 text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-4">Innovation First</h4>
+            <p class="text-white/80 leading-relaxed">
+              Selalu mengutamakan inovasi dalam setiap solusi yang kami
+              kembangkan untuk memberikan nilai tambah maksimal.
+            </p>
+          </div>
+
+          <!-- Quality -->
+          <div
+            class="vision-card glass-effect rounded-3xl p-8 text-center transition-all duration-500 animate-fade-in"
+            style="animation-delay: 0.3s"
+          >
+            <div
+              class="bg-gray-300 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 animate-pulse-slow"
+            >
+              <svg
+                class="w-8 h-8 text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-4">
+              Quality Excellence
+            </h4>
+            <p class="text-white/80 leading-relaxed">
+              Komitmen pada kualitas tinggi dalam setiap aspek pekerjaan, dari
+              konsep hingga implementasi final.
+            </p>
+          </div>
+
+          <!-- Sustainability -->
+          <div
+            class="vision-card glass-effect rounded-3xl p-8 text-center transition-all duration-500 animate-fade-in"
+            style="animation-delay: 0.5s"
+          >
+            <div
+              class="bg-white w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 animate-pulse-slow"
+            >
+              <svg
+                class="w-8 h-8 text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-4">Sustainability</h4>
+            <p class="text-white/80 leading-relaxed">
+              Membangun solusi teknologi yang berkelanjutan dan berkontribusi
+              positif terhadap lingkungan dan masyarakat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="glass-effect text-white text-center py-8 border-t border-white/20"
+    >
+      <div class="max-w-6xl mx-auto px-4">
+        <p class="text-lg font-medium">
+          © 2025 MyCompany. All Rights Reserved.
+        </p>
+        <p class="text-white/70 mt-2">
+          Mewujudkan visi bersama menuju masa depan yang lebih baik
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add smooth scrolling and interactions
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        });
+      });
+    </script>
+
+    <!-- Load Navbar -->
+    <script src="js/navbar.js"></script>
+  </body>
+</html>

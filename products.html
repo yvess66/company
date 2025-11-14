@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | MyCompany</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              "fade-in": "fadeIn 0.6s ease-in-out",
+              "slide-up": "slideUp 0.8s ease-out",
+              "pulse-slow": "pulse 3s infinite",
+              "bounce-slow": "bounce 2s infinite",
+              float: "float 3s ease-in-out infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              slideUp: {
+                "0%": { opacity: "0", transform: "translateY(50px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gradient-bg {
+        background: linear-gradient(
+          135deg,
+          #1a1a1a 0%,
+          #2d2d2d 50%,
+          #1a1a1a 100%
+        );
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .product-card:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 35px 70px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body class="gradient-bg min-h-screen text-gray-800">
+    <!-- Navbar akan di-load dari navbar.js -->
+
+    <!-- Hero -->
+    <section
+      class="relative min-h-[60vh] sm:h-[70vh] flex items-center justify-center overflow-hidden"
+    >
+      <img
+        src="images/index.jpg"
+        class="absolute inset-0 w-full h-full object-cover opacity-60 animate-fade-in"
+        alt="Products"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-gray-600/30 to-gray-800/30"
+      ></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="animate-slide-up">
+          <div class="mb-4 inline-block">
+            <span
+              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-full uppercase tracking-wider"
+            >
+              Our Products
+            </span>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 text-white drop-shadow-2xl"
+          >
+            Produk Kami
+          </h2>
+          <p
+            class="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 px-4"
+          >
+            Inovatif • Berkualitas • Solutif
+          </p>
+          <div
+            class="inline-block bg-white/10 backdrop-blur-lg rounded-full px-6 sm:px-8 py-3 sm:py-4 border border-white/20 max-w-2xl mx-4"
+          >
+            <p class="text-white text-sm sm:text-base lg:text-lg font-medium">
+              Solusi teknologi terdepan untuk kebutuhan bisnis modern
+            </p>
+          </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div
+          class="absolute top-20 left-10 w-20 h-20 bg-white/20 rounded-full animate-float hidden lg:block"
+          style="animation-delay: 0s"
+        ></div>
+        <div
+          class="absolute top-40 right-20 w-16 h-16 bg-gray-300/20 rounded-full animate-float hidden lg:block"
+          style="animation-delay: 1s"
+        ></div>
+        <div
+          class="absolute bottom-20 left-1/4 w-12 h-12 bg-gray-200/20 rounded-full animate-float hidden lg:block"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Product List -->
+    <section class="py-20 relative">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16 animate-slide-up">
+          <h3 class="text-5xl font-bold text-white mb-6 drop-shadow-lg">
+            Portfolio Solusi Kami
+          </h3>
+          <p class="text-xl text-white/80 max-w-3xl mx-auto">
+            Teknologi canggih yang dirancang khusus untuk mengoptimalkan
+            operasional bisnis Anda
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Smart System -->
+          <div
+            class="product-card glass-effect rounded-3xl overflow-hidden transition-all duration-500 animate-fade-in"
+            style="animation-delay: 0.1s"
+          >
+            <div class="relative">
+              <img
+                src="images/test3.png"
+                class="w-full h-56 object-cover"
+                alt="Smart System"
+              />
+              <div
+                class="absolute top-4 right-4 bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center animate-pulse-slow"
+              >
+                <svg
+                  class="w-6 h-6 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-2xl font-bold text-white mb-3">Smart System</h4>
+              <p class="text-white/80 mb-4 leading-relaxed">
+                Sistem pintar berbasis IoT untuk efisiensi dan kontrol penuh
+                bisnis Anda dengan monitoring real-time.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-gray-200/20 text-gray-300 px-3 py-1 rounded-full text-xs"
+                  >IoT</span
+                >
+                <span
+                  class="bg-gray-200/20 text-gray-300 px-3 py-1 rounded-full text-xs"
+                  >Automation</span
+                >
+                <span
+                  class="bg-gray-200/20 text-gray-300 px-3 py-1 rounded-full text-xs"
+                  >Real-time</span
+                >
+              </div>
+              <button
+                class="w-full bg-gray-300 hover:bg-gray-400 text-black py-3 rounded-lg transition-all duration-300 font-semibold"
+              >
+                Pelajari Lebih Lanjut
+              </button>
+            </div>
+          </div>
+
+          <!-- AI Solutions -->
+          <div
+            class="product-card glass-effect rounded-3xl overflow-hidden transition-all duration-500 animate-fade-in"
+            style="animation-delay: 0.3s"
+          >
+            <div class="relative">
+              <img
+                src="images/test2.jpg"
+                class="w-full h-56 object-cover"
+                alt="AI Solutions"
+              />
+              <div
+                class="absolute top-4 right-4 bg-gray-300 w-12 h-12 rounded-full flex items-center justify-center animate-pulse-slow"
+              >
+                <svg
+                  class="w-6 h-6 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-2xl font-bold text-white mb-3">AI Solutions</h4>
+              <p class="text-white/80 mb-4 leading-relaxed">
+                Solusi kecerdasan buatan untuk analisis data dan automasi proses
+                kerja yang cerdas dan efisien.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-gray-300/20 text-gray-400 px-3 py-1 rounded-full text-xs"
+                  >AI/ML</span
+                >
+                <span
+                  class="bg-gray-300/20 text-gray-400 px-3 py-1 rounded-full text-xs"
+                  >Analytics</span
+                >
+                <span
+                  class="bg-gray-300/20 text-gray-400 px-3 py-1 rounded-full text-xs"
+                  >Automation</span
+                >
+              </div>
+              <button
+                class="w-full bg-gray-200 hover:bg-gray-300 text-black py-3 rounded-lg transition-all duration-300 font-semibold"
+              >
+                Pelajari Lebih Lanjut
+              </button>
+            </div>
+          </div>
+
+          <!-- Cloud Platform -->
+          <div
+            class="product-card glass-effect rounded-3xl overflow-hidden transition-all duration-500 animate-fade-in"
+            style="animation-delay: 0.5s"
+          >
+            <div class="relative">
+              <img
+                src="images/test.jpg"
+                class="w-full h-56 object-cover"
+                alt="Cloud Platform"
+              />
+              <div
+                class="absolute top-4 right-4 bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center animate-pulse-slow"
+              >
+                <svg
+                  class="w-6 h-6 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-2xl font-bold text-white mb-3">Cloud Platform</h4>
+              <p class="text-white/80 mb-4 leading-relaxed">
+                Platform cloud handal dengan keamanan tinggi dan akses fleksibel
+                untuk skalabilitas bisnis optimal.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-gray-100/20 text-gray-400 px-3 py-1 rounded-full text-xs"
+                  >Cloud</span
+                >
+                <span
+                  class="bg-gray-100/20 text-gray-400 px-3 py-1 rounded-full text-xs"
+                  >Security</span
+                >
+                <span
+                  class="bg-gray-100/20 text-gray-400 px-3 py-1 rounded-full text-xs"
+                  >Scalable</span
+                >
+              </div>
+              <button
+                class="w-full bg-white hover:bg-gray-100 text-black py-3 rounded-lg transition-all duration-300 font-semibold"
+              >
+                Pelajari Lebih Lanjut
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Stats -->
+        <div
+          class="mt-20 grid md:grid-cols-4 gap-6 animate-slide-up"
+          style="animation-delay: 0.7s"
+        >
+          <div
+            class="glass-effect rounded-2xl p-6 text-center transition-all duration-300 hover:scale-105"
+          >
+            <div class="text-3xl font-bold text-white mb-2">100%</div>
+            <div class="text-white/80">Uptime Guarantee</div>
+          </div>
+          <div
+            class="glass-effect rounded-2xl p-6 text-center transition-all duration-300 hover:scale-105"
+          >
+            <div class="text-3xl font-bold text-white mb-2">50+</div>
+            <div class="text-white/80">Successful Deployments</div>
+          </div>
+          <div
+            class="glass-effect rounded-2xl p-6 text-center transition-all duration-300 hover:scale-105"
+          >
+            <div class="text-3xl font-bold text-white mb-2">24/7</div>
+            <div class="text-white/80">Technical Support</div>
+          </div>
+          <div
+            class="glass-effect rounded-2xl p-6 text-center transition-all duration-300 hover:scale-105"
+          >
+            <div class="text-3xl font-bold text-white mb-2">99.9%</div>
+            <div class="text-white/80">Security Rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="glass-effect text-white text-center py-8 border-t border-white/20"
+    >
+      <div class="max-w-6xl mx-auto px-4">
+        <p class="text-lg font-medium">
+          © 2025 MyCompany. All Rights Reserved.
+        </p>
+        <p class="text-white/70 mt-2">
+          Inovasi teknologi untuk masa depan yang lebih baik
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add smooth scrolling and product interactions
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        });
+      });
+    </script>
+
+    <!-- Load Navbar -->
+    <script src="js/navbar.js"></script>
+  </body>
+</html>

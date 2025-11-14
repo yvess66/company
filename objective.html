@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Objective | MyCompany</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              "fade-in": "fadeIn 0.6s ease-in-out",
+              "slide-up": "slideUp 0.8s ease-out",
+              "pulse-slow": "pulse 3s infinite",
+              "bounce-slow": "bounce 2s infinite",
+              float: "float 3s ease-in-out infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              slideUp: {
+                "0%": { opacity: "0", transform: "translateY(50px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gradient-bg {
+        background: linear-gradient(
+          135deg,
+          #1a1a1a 0%,
+          #2d2d2d 50%,
+          #1a1a1a 100%
+        );
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .objective-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body class="gradient-bg min-h-screen text-gray-800">
+    <!-- Navbar akan di-load dari navbar.js -->
+
+    <!-- Hero -->
+    <section
+      class="relative h-[60vh] flex items-center justify-center overflow-hidden"
+    >
+      <img
+        src="images/index.jpg"
+        class="absolute inset-0 w-full h-full object-cover opacity-60 animate-fade-in"
+        alt="Business Objective"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-gray-600/30 to-gray-800/30"
+      ></div>
+      <div class="relative max-w-6xl mx-auto px-4 text-center">
+        <div class="animate-slide-up">
+          <h2 class="text-7xl font-bold mb-6 text-white drop-shadow-2xl">
+            Business Objective
+          </h2>
+          <p class="text-2xl text-white/90 mb-8">
+            Tujuan • Fokus • Berkelanjutan
+          </p>
+          <div
+            class="inline-block bg-white/10 backdrop-blur-lg rounded-full px-8 py-4 border border-white/20"
+          >
+            <p class="text-white text-lg font-medium">
+              Roadmap strategis menuju kesuksesan jangka panjang
+            </p>
+          </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div
+          class="absolute top-20 left-10 w-20 h-20 bg-white/20 rounded-full animate-float"
+          style="animation-delay: 0s"
+        ></div>
+        <div
+          class="absolute top-40 right-20 w-16 h-16 bg-gray-300/20 rounded-full animate-float"
+          style="animation-delay: 1s"
+        ></div>
+        <div
+          class="absolute bottom-20 left-1/4 w-12 h-12 bg-gray-200/20 rounded-full animate-float"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section class="py-20 relative">
+      <div class="max-w-6xl mx-auto px-4 space-y-20">
+        <!-- Short Term Objectives -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div
+            class="objective-card glass-effect rounded-3xl p-12 transition-all duration-500 animate-fade-in"
+          >
+            <div
+              class="bg-gray-200 w-20 h-20 rounded-full flex items-center justify-center mb-8 animate-pulse-slow"
+            >
+              <svg
+                class="w-10 h-10 text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-4xl font-bold text-white mb-6">Short Term Goals</h3>
+            <p class="text-xl text-white/80 leading-relaxed mb-8">
+              Dalam jangka pendek, MyCompany berfokus untuk memperluas jangkauan
+              pasar digital nasional, memperkuat branding, dan meningkatkan
+              kualitas layanan pelanggan agar menjadi mitra terpercaya dalam
+              solusi teknologi.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white/10 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-white">2025</div>
+                <div class="text-white/70 text-sm">Market Expansion</div>
+              </div>
+              <div class="bg-white/10 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-white">100+</div>
+                <div class="text-white/70 text-sm">New Clients</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-6 animate-fade-in" style="animation-delay: 0.3s">
+            <div
+              class="objective-card glass-effect rounded-2xl p-6 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex items-center space-x-4">
+                <div
+                  class="bg-gray-300 w-12 h-12 rounded-lg flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-bold">Market Growth</h4>
+                  <p class="text-white/70 text-sm">Expand to 5 major cities</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="objective-card glass-effect rounded-2xl p-6 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex items-center space-x-4">
+                <div
+                  class="bg-white w-12 h-12 rounded-lg flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-bold">Service Excellence</h4>
+                  <p class="text-white/70 text-sm">98% customer satisfaction</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="objective-card glass-effect rounded-2xl p-6 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex items-center space-x-4">
+                <div
+                  class="bg-gray-100 w-12 h-12 rounded-lg flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-bold">Team Expansion</h4>
+                  <p class="text-white/70 text-sm">Double our team size</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Long Term Objectives -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div
+            class="space-y-6 animate-fade-in order-2 lg:order-1"
+            style="animation-delay: 0.5s"
+          >
+            <div
+              class="objective-card glass-effect rounded-2xl p-6 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex items-center space-x-4">
+                <div
+                  class="bg-gray-200 w-12 h-12 rounded-lg flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-bold">Ecosystem Building</h4>
+                  <p class="text-white/70 text-sm">
+                    Sustainable tech ecosystem
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="objective-card glass-effect rounded-2xl p-6 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex items-center space-x-4">
+                <div
+                  class="bg-gray-300 w-12 h-12 rounded-lg flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-bold">Social Impact</h4>
+                  <p class="text-white/70 text-sm">Positive community impact</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="objective-card glass-effect rounded-2xl p-6 transition-all duration-300 hover:scale-105"
+            >
+              <div class="flex items-center space-x-4">
+                <div
+                  class="bg-white w-12 h-12 rounded-lg flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-white font-bold">Innovation Hub</h4>
+                  <p class="text-white/70 text-sm">
+                    Regional innovation center
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="objective-card glass-effect rounded-3xl p-12 transition-all duration-500 animate-fade-in order-1 lg:order-2"
+            style="animation-delay: 0.7s"
+          >
+            <div
+              class="bg-gray-100 w-20 h-20 rounded-full flex items-center justify-center mb-8 animate-pulse-slow"
+            >
+              <svg
+                class="w-10 h-10 text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-4xl font-bold text-white mb-6">Long Term Vision</h3>
+            <p class="text-xl text-white/80 leading-relaxed mb-8">
+              Kami berkomitmen untuk membangun ekosistem teknologi berkelanjutan
+              yang mendukung inovasi, mendorong transformasi digital di berbagai
+              industri, dan memberikan dampak positif bagi masyarakat luas.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white/10 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-white">2030</div>
+                <div class="text-white/70 text-sm">Vision Target</div>
+              </div>
+              <div class="bg-white/10 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-white">10x</div>
+                <div class="text-white/70 text-sm">Growth Impact</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Values -->
+        <div
+          class="objective-card glass-effect rounded-3xl p-12 text-center transition-all duration-500 animate-fade-in"
+          style="animation-delay: 0.9s"
+        >
+          <div
+            class="bg-gray-200 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse-slow"
+          >
+            <svg
+              class="w-10 h-10 text-black"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 3l14 9-14 9V3z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-4xl font-bold text-white mb-8">Core Values</h3>
+          <div class="grid md:grid-cols-5 gap-6">
+            <div class="bg-white/10 rounded-xl p-4">
+              <div class="text-lg font-bold text-white mb-2">Integrity</div>
+              <div class="text-white/70 text-sm">Setiap langkah bisnis</div>
+            </div>
+            <div class="bg-white/10 rounded-xl p-4">
+              <div class="text-lg font-bold text-white mb-2">Innovation</div>
+              <div class="text-white/70 text-sm">Berkelanjutan</div>
+            </div>
+            <div class="bg-white/10 rounded-xl p-4">
+              <div class="text-lg font-bold text-white mb-2">Quality</div>
+              <div class="text-white/70 text-sm">Komitmen tertinggi</div>
+            </div>
+            <div class="bg-white/10 rounded-xl p-4">
+              <div class="text-lg font-bold text-white mb-2">Teamwork</div>
+              <div class="text-white/70 text-sm">Kerja sama kuat</div>
+            </div>
+            <div class="bg-white/10 rounded-xl p-4">
+              <div class="text-lg font-bold text-white mb-2">
+                Responsibility
+              </div>
+              <div class="text-white/70 text-sm">Sosial & lingkungan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="glass-effect text-white text-center py-8 border-t border-white/20"
+    >
+      <div class="max-w-6xl mx-auto px-4">
+        <p class="text-lg font-medium">
+          © 2025 MyCompany. All Rights Reserved.
+        </p>
+        <p class="text-white/70 mt-2">
+          Mencapai tujuan bersama melalui strategi yang terukur
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add smooth scrolling and objective interactions
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        });
+      });
+    </script>
+
+    <!-- Load Navbar -->
+    <script src="js/navbar.js"></script>
+  </body>
+</html>
